@@ -10,4 +10,13 @@ describe("Test runner", () => {
     expect(secret).toBeDefined();
     expect(secret?.length).toBeGreaterThan(0);
   });
+
+  /** Add this line to the .env.screts file (not committed):
+   * MY_LOCAL_SECRET=<enter any secret>
+   */
+  test("Get a local secret", () => {
+    const secret = process.env.MY_LOCAL_SECRET;
+    expect(secret).toBeDefined();
+    expect(secret?.length).toBeGreaterThan(0);
+  });
 });

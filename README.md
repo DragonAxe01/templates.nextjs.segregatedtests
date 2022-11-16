@@ -16,6 +16,16 @@
 
     npm run test-pipeline
 
+## How to use a custom config with the Jest Runner for vscodes
+
+    Install the Jest Runner extension.
+
+    Add this setting to the settings.json file for vscode:
+
+        "jestrunner.configPath": "jest.all.config.ts"
+
+    Use the runner directly in with the editor.
+
 ## How to run a specific test
 
     npm test --config=jest.base.ts -- -t "<name of test>"
