@@ -5,4 +5,9 @@ describe("Integration tests", () => {
     const serv = new MyService();
     const res = serv.doSomething();
   });
+
+  test("My integration test 2", () => {
+    const serv = new MyService();
+    const res = serv.doSomething();
+  });
 });

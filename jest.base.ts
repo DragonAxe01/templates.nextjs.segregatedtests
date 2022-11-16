@@ -5,7 +5,8 @@ const config: Config.InitialOptions = {
   transform: {
     ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js",
   },
-  testRegex: "(/__tests__/.*|unit\\.(test|spec))\\.(ts|tsx|js)$",
+  testMatch: ["\\.(test|spec)\\.(ts|tsx|js)$"],
+  // testMatch: ["**/*.*"],
   moduleFileExtensions: ["ts", "tsx", "js"],
 };
 
