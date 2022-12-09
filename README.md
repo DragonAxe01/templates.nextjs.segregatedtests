@@ -1,39 +1,48 @@
-# Jest configuration to run different tests in different files using npm scripts.
+# Jest test devops
 
-## How to run all tests
+This is a template to run test differently in different environment or setup. This enables running tests in local (for devs), using integration tests, unit tests, or tests in the pipeline (by the agent).
 
-    npm run test
+## Installation
 
-## How to run unit tests
+```bash
+npm i
+```
 
-    npm run test-unit
+## Test locally
 
-## How to run integration tests
+```bash
+npm run test
+```
 
-    npm run test-integration
+## Unit tests locally
 
-## How to run pipeline tests
+```bash
+npm run test-unit
+```
 
-    npm run test-pipeline
+## Integration tests locally
 
-## How to use a custom config with the Jest Runner for vscodes
+```bash
+npm run test-integration
+```
 
-    Install the Jest Runner extension.
+## Pipeline tests locally
 
-    Add this setting to the settings.json file for vscode:
+```bash
+npm run test-pipeline
+```
 
-        "jestrunner.configPath": "jest.all.config.ts"
+## Run in the pipeline
 
-    Use the runner directly in with the editor.
+- Setup a Github repository supporting workflow and use the appropriate branch names (see workflow definitions).
 
-## How to run a specific test
+- Push or make an appropriate PR to trigger the workflow. the pipeline tests will automatically run.
 
-    npm test --config=jest.base.ts -- -t "<name of test>"
+## Using the Jest Runner for vscode
 
-    or
+- Install the Jest Runner extension.
 
-    npm test --config=jest.base.ts -- -t "<name of suite>"
+- The common config file is jest.config.ts
 
-    or
+- Use the runner directly in vscode.
 
-    npm test --config=jest.base.ts -- -t "<name of suite> <name of test>"
