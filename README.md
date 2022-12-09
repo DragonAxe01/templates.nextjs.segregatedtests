@@ -32,12 +32,6 @@ npm run test-integration
 npm run test-pipeline
 ```
 
-## Run in the pipeline
-
-- Setup a Github repository supporting workflow and use the appropriate branch names (see workflow definitions).
-
-- Push or make an appropriate PR to trigger the workflow. the pipeline tests will automatically run.
-
 ## Using the Jest Runner for vscode
 
 - Install the Jest Runner extension.
